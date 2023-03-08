@@ -2,10 +2,9 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const VenueSchema = new Schema({
-    title: String,
-    price: String,
-    description: String,
-    location: String
+    name: String,
+    league: String,
+    team: String
 })
 
 module.exports = mongoose.model("Venue", VenueSchema);

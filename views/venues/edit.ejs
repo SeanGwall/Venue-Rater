@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Venue</title>
+</head>
+<body>
+    <h1>Edit Venue</h1>
+    <form action="/venues/<%= venue._id %>?_method=PUT" method="POST">
+        <div>
+            <label for="name">Venue Name</label>
+            <input type="text" id="name" name="venue[name]" value="<%= venue.name %>">
+        </div>
+        <div>
+            <label for="team">Team Name</label>
+            <input type="text" id="team" name="venue[team]" value="<%= venue.team %>">
+        </div>
+        <div>
+            <label for="league">League</label>
+            <input type="text" id="league" name="venue[league]" value="<%= venue.league %>">
+        </div>
+        <button>Update Venue</button>
+    </form>
+
+    <a href="/venues/<%= venue.id %>">Back</a>
+</body>
+</html>
