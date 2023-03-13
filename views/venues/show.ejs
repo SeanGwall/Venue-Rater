@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show</title>
-</head>
-<body>
-    <h1>Venue Show Page</h1>
+<% layout("layouts/boilerplate.ejs") %>
+<h1>Venue Show Page</h1>
 
-    <h3>Name: <%= venue.name %></h3>
-    <h3>Team: <%= venue.team %></h3>
-    <h3>League: <%= venue.league %></h3>
+<h3>Name: <%= venue.name %></h3>
+<h3>Team: <%= venue.team %></h3>
+<h3>League: <%= venue.league %></h3>
 
-    <a href="/venues/<%= venue._id %>/edit">Edit Venue</a><br>
-    <a href="/venues">Back to All Venues</a>
-    <form action="/venues/<%= venue._id %>?_method=DELETE" method="POST">
-        <button>Delete Venue</button>
-    </form>
-</body>
-</html>
+<a href="/venues/<%= venue._id %>/edit">Edit Venue</a><br>
+<a href="/venues">Back to All Venues</a>
+<form action="/venues/<%= venue._id %>?_method=DELETE" method="POST">
+    <button>Delete Venue</button>
+</form>
