@@ -1,19 +1,28 @@
 <% layout("layouts/boilerplate.ejs") %>
-<h1>Edit Venue</h1>
-<form action="/venues/<%= venue._id %>?_method=PUT" method="POST">
-    <div>
-        <label for="name">Venue Name</label>
-        <input type="text" id="name" name="venue[name]" value="<%= venue.name %>">
+<div class="row">
+    <h1 class="text-center">Edit Venue</h1>
+    <div class="col-6 offset-3">
+        <form action="/venues/<%= venue._id %>?_method=PUT" method="POST">
+            <div class="mb-3">
+                <label class="form-label" for="name">Venue Name</label>
+                <input class="form-control" type="text" id="name" name="venue[name]" value="<%= venue.name %>">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="team">Team Name</label>
+                <input class="form-control" type="text" id="team" name="venue[team]" value="<%= venue.team %>">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="league">Image URL</label>
+                <input class="form-control" type="text" id="league" name="venue[image]" value="<%= venue.image %>">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="league">League</label>
+                <input class="form-control" type="text" id="league" name="venue[league]" value="<%= venue.league %>">
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success">Update Venue</button>
+                <a class="btn btn-warning" href="/venues/<%= venue.id %>"">Cancel</a>
+            </div>
+        </form>
     </div>
-    <div>
-        <label for="team">Team Name</label>
-        <input type="text" id="team" name="venue[team]" value="<%= venue.team %>">
-    </div>
-    <div>
-        <label for="league">League</label>
-        <input type="text" id="league" name="venue[league]" value="<%= venue.league %>">
-    </div>
-    <button>Update Venue</button>
-</form>
-
-<a href="/venues/<%= venue.id %>">Back</a>
+</div>

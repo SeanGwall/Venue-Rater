@@ -11,7 +11,8 @@ const fillNFL = async () => {
 		const nflVenue = new Venue({
 			name : feature.properties.Stadium,
 			league : "NFL",
-			team : feature.properties.Team
+			team : feature.properties.Team,
+			image : "https://pbs.twimg.com/media/EAvKwdaWwAE9y13?format=jpg&name=large"
 		})
 		await nflVenue.save();
 	}
@@ -22,7 +23,8 @@ const fillMLB = async () => {
 		const mlbVenue = new Venue({
 			name : key,
 			league : "MLB",
-			team : val.team
+			team : val.team,
+			image : "https://pbs.twimg.com/media/EAvKwdaWwAE9y13?format=jpg&name=large"
 		})
 		await mlbVenue.save();
 	}
@@ -33,7 +35,8 @@ const fillNHL = async () => {
 		const nhlVenue = new Venue({
 			name : feature.properties.name,
 			league : "NHL",
-			team : feature.properties.team
+			team : feature.properties.team,
+			image : "https://pbs.twimg.com/media/EAvKwdaWwAE9y13?format=jpg&name=large"
 		})
 		await nhlVenue.save();
 	}
